@@ -15,7 +15,7 @@ const usersController = {
     getAllUsers(req, res) {
         Users.find({})
         // populate users thoughts
-        .populate({path: 'thoughts', select: '-__v'})
+        .populate({path: 'thought', select: '-__v'})
         // populate user friends
         .populate({path: 'friends', select: '-__v'})
         .select('-__v')
@@ -30,7 +30,7 @@ const usersController = {
     // Get single user by ID
     getUsersById({params}, res) {
         Users.findOne({_id: params.id })
-        .populate({path: 'thoughts', select: '-__v'})
+        .populate({path: 'thought', select: '-__v'})
         .populate({path: 'friends', select: '-__v'})
         .select('-__v')
         // return if no user is found 
