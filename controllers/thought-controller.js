@@ -110,5 +110,5 @@ const thoughtController = {
 
 };
 
-// Export module thought controller
+
 module.exports = thoughtController;
